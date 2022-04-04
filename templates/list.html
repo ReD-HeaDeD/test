@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <table border = 1>
+         <thead>
+            <td>Name</td>
+            <td>Dollar</td>
+         </thead>
+
+        {% for row in rows %}
+            <tr>
+               <td>{{row["name"]}}</td>
+               <td>{{row["dollar"]}}</td>
+            </tr>
+        {% endfor %}
+      </table>
+</body>
+</html>
