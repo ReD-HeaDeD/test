@@ -3,7 +3,6 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def index():
     con = sqlite3.connect("coin.db")
@@ -13,7 +12,7 @@ def index():
     cur.execute("select * from Coins")
 
     rows = cur.fetchall() #возвращает все строки в виде списка
-    return render_template('list.html', rows=rows)
+    return render_template('index.html', rows=rows)
 
 
 if __name__ == '__main__':
